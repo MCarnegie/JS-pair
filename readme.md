@@ -17,3 +17,5 @@
 - Must have 5 different rewards
 - Each reward must be visually represented in the rewards area
 - When a reward is earned, show a congratulations message
+
+## Pair number 58

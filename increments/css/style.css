@@ -4,3 +4,64 @@
     align-items: center;
 }
 
+
+/* Upgrade area and Click area CSS */
+.click-area{
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.bg-area{
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+img .click-area{
+    width: 100%;
+    display: block;
+}
+
+.overlay{
+    position: absolute;
+ 
+}
+
+.overlayBg{
+    position: absolute;
+    z-index: 2;
+}
+
+#moreClickers {
+    top: 20px;
+    left: 20px;
+}
+
+#autoClickSpeed {
+    top: 20px;
+    left: 120px;
+}
+
+#upgradeClick {
+    top: 20px;
+    left: 520px;
+}
+
+img.storeBackground{
+    width: 700px;
+    
+}
+
+.button {
+    transition: transform 0.15s ease;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: scale(1.2);
+}
+
+.button.shrink {
+    transform: scale(0.95);
+}

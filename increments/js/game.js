@@ -1,13 +1,19 @@
 numClicks = 0
 
-document.getElementById("cow").addEventListener("click", () =>{
+document.getElementById("cow").addEventListener("click", () => {
     numClicks++
-    cowSelect(document.getElementById("cow").classList.add)
+    Select(document.getElementById("cow"))
 })
 
 
 
-function cowSelect(img){
-    img.add
+function Select(img) {
+   img.classList.add("shrink")
+
+   setTimeout(()=>{
+        img.classList.remove("shrink")
+   },50)
+
+
+
 }
-    

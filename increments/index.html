@@ -10,16 +10,21 @@ web page and include your name as author.
     <title>Incremental Game</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
 </head>
 
 <body>
     <div class="content">
-        <img id = "cow" src="./images/cow.png" alt="">
-        <div id="upgrade">
-            <div id="moreClickers"></div>
-            <div id="autoClickSpeed"></div>
-            <div id="upgradeClick"></div>
+        <div class="click-area">
+            <img id="cow" class="button overlay" src="./images/cow.png" alt="">
+            <img id="feild" src="./images/feild.png" alt="">
+        </div>
+
+        <div class="bg-area">
+            <img class="storeBackground" src="./images/storebackground.png" alt="">
+            <img id="moreClickers" class="button overlayBg" src="./images/cow.png" alt="">
+            <img id="autoClickSpeed" class="button overlayBg" src="./images/cow.png" alt="">
+            <img id="upgradeClick" class="button overlayBg" src="./images/cow.png" alt="">
         </div>
         <div id="score"></div>
         <div id="rewards">
@@ -28,7 +33,7 @@ web page and include your name as author.
         </div>
     </div>
 
-   <script src="./js/game.js"></script> 
+    <script src="./js/game.js"></script>
 </body>
 
 </html>
