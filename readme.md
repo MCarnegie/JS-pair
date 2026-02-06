@@ -1,12 +1,19 @@
-Click area
-upgrade area
-    Must have 2 upgrades that 
-        1. Upgrades value of each click (3 upgrades at least)
-        2. starts and upgrades an autoclciker timer so clicks happen automatically (one upgrade that starts auto click and 2 more that increase the speed)
-scoreboard
-    shows how many points collected, current click value, how many upgrades in play
-    present visually instead of numbers on screen
-rewards area
-    Must have 5 different rewards
-    each one must be repersented visually in a rewards area
-    when reward earned show a congratulations message
+## Click Area
+## Upgrade area
+  - Must have 2 upgrades:
+    1. Upgrade the value of each click (at least 3 upgrades)
+    2. Start and upgrade an autoclicker timer so clicks happen automatically
+       - 1 upgrade starts the autoclicker
+       - 2 upgrades increase the autoclick speed
+
+## Scoreboard
+- Shows:
+  - Total points collected
+  - Current click value
+  - Number of upgrades in play
+- Must be presented visually instead of using numbers on screen
+
+## Rewards Area
+- Must have 5 different rewards
+- Each reward must be visually represented in the rewards area
+- When a reward is earned, show a congratulations message
