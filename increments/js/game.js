@@ -9,11 +9,7 @@ document.getElementById("cow").addEventListener("click", () => {
 
 function Select(img) {
    img.classList.add("shrink")
-
    setTimeout(()=>{
         img.classList.remove("shrink")
    },50)
-
-
-
 }

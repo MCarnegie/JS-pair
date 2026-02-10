@@ -1,56 +1,43 @@
-.content{
+.content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
 }
 
+.tile {
+    margin: 10px;
+    border-radius: 10px;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(27, 27, 28, 0.4);
+}
+
 
 /* Upgrade area and Click area CSS */
-.click-area{
-    position: relative;
+.click-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1000px;
+    background-image: url("../images/feild.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.upgrade-area {
+    background-image: url("../images/storebackground.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1000px;
     display: grid;
-    place-items: center;
+    grid-row: auto;
 }
 
-.bg-area{
-    position: relative;
-    display: inline-block;
-    z-index: 1;
-}
 
-img .click-area{
+img .click-area {
     width: 100%;
     display: block;
-}
-
-.overlay{
-    position: absolute;
- 
-}
-
-.overlayBg{
-    position: absolute;
-    z-index: 2;
-}
-
-#moreClickers {
-    top: 20px;
-    left: 20px;
-}
-
-#autoClickSpeed {
-    top: 20px;
-    left: 120px;
-}
-
-#upgradeClick {
-    top: 20px;
-    left: 520px;
-}
-
-img.storeBackground{
-    width: 700px;
-    
 }
 
 .button {
