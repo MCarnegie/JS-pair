@@ -1,6 +1,6 @@
 .content {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 2fr ;
     align-items: center;
 }
 
@@ -31,8 +31,17 @@
     background-repeat: no-repeat;
     height: 1000px;
     display: grid;
+    gap: 20px;
     grid-row: auto;
+    place-items: center;
 }
+
+.upgrade-area img {
+  width: 80%;
+  height: 200px;
+  display: block;
+}
+
 
 
 img .click-area {
