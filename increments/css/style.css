@@ -50,6 +50,11 @@ main {
   min-height: 24px;
   align-items: center;
 }
+.content {
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    align-items: center;
+}
 
 
 .dots {
@@ -67,3 +72,60 @@ main {
   border-radius: 4px;
 }
 
+.tile {
+    margin: 10px;
+    border-radius: 10px;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(27, 27, 28, 0.4);
+}
+
+
+/* Upgrade area and Click area CSS */
+.click-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1000px;
+    background-image: url("../images/feild.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.upgrade-area {
+    background-image: url("../images/storebackground.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1000px;
+    display: grid;
+    gap: 20px;
+    grid-row: auto;
+    place-items: center;
+}
+
+.upgrade-area img {
+  width: 80%;
+  height: 200px;
+  display: block;
+}
+
+
+
+img .click-area {
+    width: 100%;
+    display: block;
+}
+
+.button {
+    transition: transform 0.15s ease;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: scale(1.2);
+}
+
+.button.shrink {
+    transform: scale(0.95);
+}
