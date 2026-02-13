@@ -1,35 +1,55 @@
 const player = {
     numClicks: 0,
-    numClickers: 0,
-    numAutoClickSpeed: 1,
-    numUpgradeClick: 1,
+    numAutoClickSpeed: 0,
+    numUpgradeClick: 0,
 }
-let moreClickersPrice = 0;
-let autoClickSpeedPrice = 0;
-let upgradeClick = 0;
-let numUpgrades = 5;
+let autoClickSpeedPrice = 50;
+let upgradeClickPrice = 5;
+let interval;
 
 document.getElementById("cow").addEventListener("click", () => {
-    player.numClicks++
+    player.numClicks+= 1 + (1*player.numUpgradeClick)
     document.getElementById("pointsFill").innerHTML = player.numClicks
+
+
     Select(document.getElementById("cow"))
 })
 
-document.getElementById("moreClicks").addEventListener("click", () => {
-    player.numClickers++;
-    numUpgrades++;
-    Select(document.getElementById("moreClicks"))
-})
-
 document.getElementById("autoClickSpeed").addEventListener("click", () => {
-    player.numAutoClickSpeed++;
-    numUpgrades++;
+    if (player.numClicks >= autoClickSpeedPrice) {
+        player.numClicks -= autoClickSpeedPrice
+        document.getElementById("pointsFill").innerHTML = player.numClicks
+        player.numAutoClickSpeed++;
+        autoClickSpeedPrice += 4 ** player.numAutoClickSpeed
+        document.getElementById("autoPrice").innerHTML = autoClickSpeedPrice 
+        if (interval != null) {
+            clearInterval(interval)
+        }
+
+        interval = setInterval(() => {
+            player.numClicks++
+            document.getElementById("pointsFill").innerHTML = player.numClicks
+        }, 1000 - (player.numAutoClickSpeed * 100))
+    }
+
+    renderScoreboard();
     Select(document.getElementById("autoClickSpeed"))
 })
 
 document.getElementById("upgradeClick").addEventListener("click", () => {
-    player.numClickers++;
-    numUpgrades++;
+    if(player.numClicks>=upgradeClickPrice){
+        player.numClicks -= upgradeClickPrice;
+        document.getElementById("pointsFill").innerHTML = player.numClicks
+        player.numUpgradeClick++;
+        upgradeClickPrice += 5** player.numUpgradeClick
+         document.getElementById("clickPrice").innerHTML = upgradeClickPrice
+
+    }
+   
+
+
+
+    renderScoreboard();
     Select(document.getElementById("upgradeClick"))
 })
 
@@ -57,9 +77,9 @@ const upgradeDots = document.getElementById("upgradeDots");
 
 function renderScoreboard() {
     const segmentMax = 200;
-    const progress = player.numClicks % segmentMax;
-    const percent = (progress / segmentMax) * 100;
-    pointsFill.style.width = percent + "%";
+    //const progress = player.numClicks % segmentMax;
+    //const percent = (progress / segmentMax) * 100;
+    //pointsFill.style.width = percent + "%";
 
 
     clickStars.innerHTML = "";
@@ -71,7 +91,7 @@ function renderScoreboard() {
 
 
     upgradeDots.innerHTML = "";
-    for (let i = 0; i < numUpgrades; i++) {
+    for (let i = 0; i < player.numAutoClickSpeed; i++) {
         const dot = document.createElement("div");
         dot.className = "dot";
         upgradeDots.appendChild(dot);
