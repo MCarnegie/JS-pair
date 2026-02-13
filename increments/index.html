@@ -18,25 +18,43 @@ web page and include your name as author.
 
         <div class="tile click-area">
             <img id="cow" class="button" src="./images/cow.png" alt="">
-         
+
         </div>
         <div class="tile upgrade-area">
-            <div class="tile button" id = "moreClicks"></div>
-            
+            <div class="tile button" id="moreClicks"></div>
             <img id="autoClickSpeed" class="button" src="./images/temp-banner.png" alt="">
             <img id="upgradeClick" class="button" src="./images/temp-banner.png" alt="">
         </div>
         <div class="tile score-area">
-            <h1>SCORE AREA</h1>
-            <div id="score">0</div>
+            <section id="scoreboard" class="panel">
+                <h2>Scoreboard</h2>
+                <div class="sb-row">
+                    <div class="sb-label">Total</div>
+                    <div class="meter" aria-label="Total points meter">
+                        <div id="pointsFill" class="meter-fill"></div>
+                    </div>
+                </div>
+
+
+                <div class="sb-row">
+                    <div class="sb-label">Click</div>
+                    <div id="clickStars" class="stars" aria-label="Click value stars"></div>
+                </div>
+
+
+                <div class="sb-row">
+                    <div class="sb-label">Upgrades</div>
+                    <div id="upgradeDots" class="dots" aria-label="Upgrades in play dots"></div>
+                </div>
+            </section>
         </div>
         <div class="tile reward-area">
             <h1>REWARD AREA</h1>
         </div>
 
 
-      
-       
+
+
     </div>
 
     <script src="./js/game.js"></script>
