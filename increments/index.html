@@ -14,28 +14,17 @@ web page and include your name as author.
 </head>
 
 <body>
+
     <div class="content">
 
         <div class="tile click-area">
             <img id="cow" class="button" src="./images/cow.png" alt="">
-
-        </div>
-        <div class="tile upgrade-area">
-            <div class="tile button" id="autoClickSpeed">
-                <h1>AUTO CLICK SPEED</h1>
-                <p>Price: <div id="autoPrice">50</div></p>
-            </div>
-            <div class="tile button" id="upgradeClick">
-                <h1>UPGRADE CLICKS</h1>
-                <p>Price: <div id="clickPrice">5</div></p>
-            </div>
-
         </div>
         <div class="tile score-area">
             <section id="scoreboard" class="panel">
                 <h2>Scoreboard</h2>
                 <div class="sb-row">
-                    <div class="sb-label">Total</div>
+                    <div class="sb-label">Total Cow Score</div>
                     <div class="meter" aria-label="Total points meter">
                         <div id="pointsFill" class="meter-fill"></div>
                     </div>
@@ -43,27 +32,75 @@ web page and include your name as author.
 
 
                 <div class="sb-row">
-                    <div class="sb-label">Click Power</div>
+                    <div class="sb-label">Cattle Prod Power</div>
                     <div id="clickStars" class="stars" aria-label="Click value stars"></div>
                 </div>
 
 
                 <div class="sb-row">
-                    <div class="sb-label">Auto Click Upgrades</div>
+                    <div class="sb-label">Auto Cow Proder Speed</div>
                     <div id="upgradeDots" class="dots" aria-label="Upgrades in play dots"></div>
                 </div>
             </section>
+            <button class="helpBtn" onclick="unHideMenu()">Help</button>
+        </div>
+        <div class="tile upgrade-area">
+            <div class="tile button" id="upgradeClick">
+                <div>
+                    <h1>Cattle Prod Power</h1>
+                    <p>Upgrade you Cattle Prod power to get more cow points!</p>
+                    <p>Cow Points Needed:
+                    <div id="clickPrice">5</div>
+                    </p>
+                </div>
+                <img src="./images/cattleProd.png" alt="">
+
+
+            </div>
+            <div class="tile button" id="autoClickSpeed">
+                <div>
+                    <h1>Cow Proder 5000</h1>
+                    <p>
+                        <span id="5000noUpgrade">The new and improved Cow Proder 5000! Automatically prods your cow for
+                            you</span>
+                        <span id="5000Upgrade" class="hidden">Upgrade your Cow Proder 5000 for more speed!</span>
+                    </p>
+                    <p>Cow points Needed:
+                    <div id="autoPrice">50</div>
+                    </p>
+                </div>
+                <img src="./images/autoCattleProd.png" alt="">
+
+            </div>
+
+
         </div>
         <div class="tile reward-area">
             <h1>REWARD AREA</h1>
         </div>
 
-        
+
 
 
     </div>
+    <div id="helpMenu" class="help-menu tile hidden ">
+        <h1>Hello and welcome to COW CLICKER!</h1>
+        <p>Your objective of the game is to click on the cow and unlock the five special cows of the farm! They will be
+            proudly displayed in your reward area</p>
+        <h1>You get these cows by reaching certain milestones:</h1>
+        <ul>
+            <li>Score 10000 cow points</li>
+            <li>Buy your first upgrade</li>
+            <li>Upgrade your click 5 times</li>
+            <li>Upgrade your auto click 5 times</li>
+            <li>Reach 100000 cow points</li>
+        </ul>
+        <h1>Good luck and Have fun</h1>
 
+        <button onclick="hideMenu()">Close</button>
+    </div>
     <script src="./js/game.js"></script>
     <!-- 注释内容 -->
 </body>
+
 </html>

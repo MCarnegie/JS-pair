@@ -1,6 +1,10 @@
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   margin: 20px;
+  background-image: url("../images/pagebackground.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 main {
@@ -40,20 +44,23 @@ main {
 .meter-fill {
   height: 100%;
   width: 0%;
-  background: #222; 
+  background: #222;
 }
 
 
 .stars {
   display: flex;
+  flex-wrap: wrap;
   gap: 6px;
   min-height: 24px;
   align-items: center;
+  max-width: 500px;
 }
+
 .content {
-    display: grid;
-    grid-template-columns: 1fr 2fr ;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
 }
 
 
@@ -63,6 +70,7 @@ main {
   gap: 6px;
   min-height: 24px;
   align-items: center;
+  max-width: 500px;
 }
 
 .dot {
@@ -73,59 +81,118 @@ main {
 }
 
 .tile {
-    margin: 10px;
-    border-radius: 10px;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(27, 27, 28, 0.4);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(27, 27, 28, 0.4);
+  background-color: white;
+}
+
+.reward-area {
+  grid-column: 1/-1;
 }
 
 
 /* Upgrade area and Click area CSS */
 .click-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 1000px;
-    background-image: url("../images/feild.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1000px;
+  background-image: url("../images/feild.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .upgrade-area {
-    background-image: url("../images/storebackground.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 1000px;
-    display: grid;
-    gap: 20px;
-    grid-row: auto;
-    place-items: center;
+  background-image: url("../images/storebackground.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 1000px;
+  display: grid;
+  gap: 20px;
+  grid-row: auto;
+  place-items: center;
+}
+
+.upgrade-area .tile {
+  width: 70%;
 }
 
 .upgrade-area img {
   width: 80%;
   height: 200px;
   display: block;
+
+}
+
+#upgradeClick {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+#autoClickSpeed {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 
 
 img .click-area {
-    width: 100%;
-    display: block;
+  width: 100%;
+  display: block;
 }
 
 .button {
-    transition: transform 0.15s ease;
-    cursor: pointer;
+  transition: transform 0.15s ease;
+  cursor: pointer;
 }
 
 .button:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .button.shrink {
-    transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+.helpBtn {
+  width: 100px;
+  height: 50px;
+}
+
+.help-menu {
+
+  position: fixed;
+  height: 50%;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.help-menu button {
+  position: fixed;
+  top: 3%;
+  left: 78%;
+  width: 20%;
+  height: 10%;
+}
+
+.help-menu p {
+  font-size: xx-large;
+}
+
+.help-menu li {
+  font-size: x-large;
+}
+
+
+.hidden {
+  display: none;
 }

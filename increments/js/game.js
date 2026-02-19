@@ -1,5 +1,5 @@
 const player = {
-    numClicks: 0,
+    numClicks: 500000000,
     numAutoClickSpeed: 0,
     numUpgradeClick: 0,
 }
@@ -8,7 +8,7 @@ let upgradeClickPrice = 5;
 let interval;
 
 document.getElementById("cow").addEventListener("click", () => {
-    player.numClicks+= 1 + (1*player.numUpgradeClick)
+    player.numClicks += 1 + (player.numUpgradeClick)
     document.getElementById("pointsFill").innerHTML = player.numClicks
 
 
@@ -20,8 +20,8 @@ document.getElementById("autoClickSpeed").addEventListener("click", () => {
         player.numClicks -= autoClickSpeedPrice
         document.getElementById("pointsFill").innerHTML = player.numClicks
         player.numAutoClickSpeed++;
-        autoClickSpeedPrice += 4 ** player.numAutoClickSpeed
-        document.getElementById("autoPrice").innerHTML = autoClickSpeedPrice 
+        autoClickSpeedPrice = Math.floor(50*(Math.pow(1.15,player.numAutoClickSpeed)))
+        document.getElementById("autoPrice").innerHTML = autoClickSpeedPrice
         if (interval != null) {
             clearInterval(interval)
         }
@@ -32,20 +32,25 @@ document.getElementById("autoClickSpeed").addEventListener("click", () => {
         }, 1000 - (player.numAutoClickSpeed * 100))
     }
 
+    if(player.numAutoClickSpeed==1){
+        document.getElementById("5000noUpgrade").classList.add("hidden")
+        document.getElementById("5000Upgrade").classList.remove("hidden")
+    }
+
     renderScoreboard();
     Select(document.getElementById("autoClickSpeed"))
 })
 
 document.getElementById("upgradeClick").addEventListener("click", () => {
-    if(player.numClicks>=upgradeClickPrice){
+    if (player.numClicks >= upgradeClickPrice) {
         player.numClicks -= upgradeClickPrice;
         document.getElementById("pointsFill").innerHTML = player.numClicks
         player.numUpgradeClick++;
-        upgradeClickPrice += 5** player.numUpgradeClick
-         document.getElementById("clickPrice").innerHTML = upgradeClickPrice
+        upgradeClickPrice += Math.floor(5*(Math.pow(1.15,player.numUpgradeClick)))
+        document.getElementById("clickPrice").innerHTML = upgradeClickPrice
 
     }
-   
+
 
 
 
@@ -60,6 +65,16 @@ function Select(img) {
     setTimeout(() => {
         img.classList.remove("shrink")
     }, 50)
+}
+
+function unHideMenu() {
+    let e = document.getElementById("helpMenu")
+    e.classList.remove("hidden")
+}
+
+function hideMenu() {
+    let e = document.getElementById("helpMenu")
+    e.classList.add("hidden")
 }
 
 
