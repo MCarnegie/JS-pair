@@ -1,10 +1,19 @@
+
+html, body {
+ height: 100%;
+ margin: 0;
+ padding: 0;
+}
+
+
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-  margin: 20px;
   background-image: url("../images/pagebackground.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 100vh;
+  
 }
 
 main {
@@ -60,7 +69,10 @@ main {
 .content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  place-content: center;
   align-items: center;
+  height: 100vh; /* fill exactly the viewport */
+  
 }
 
 
@@ -87,11 +99,10 @@ main {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(27, 27, 28, 0.4);
   background-color: white;
+  height: auto;
 }
 
-.reward-area {
-  grid-column: 1/-1;
-}
+
 
 
 /* Upgrade area and Click area CSS */
@@ -99,11 +110,11 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 1000px;
   background-image: url("../images/feild.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 120%;
 }
 
 .upgrade-area {
@@ -111,33 +122,46 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 1000px;
   display: grid;
-  gap: 20px;
-  grid-row: auto;
+  padding: 20px;
+  gap: 40px;
+  grid-template-rows: 1fr 1fr;
   place-items: center;
+  height: 120%;
+  
 }
 
 .upgrade-area .tile {
   width: 70%;
+  height: 90%;
+  margin:0;
+  
 }
 
+
 .upgrade-area img {
-  width: 80%;
-  height: 200px;
+  width: 60%;
+  height: auto;
+  max-height:100px ;
   display: block;
 
 }
 
+
+
 #upgradeClick {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  background-image: url("../images/cattleProd.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
 }
 
 #autoClickSpeed {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  background-image: url("../images/autoCattleProd.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 
@@ -153,7 +177,7 @@ img .click-area {
 }
 
 .button:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .button.shrink {
@@ -179,17 +203,37 @@ img .click-area {
 .help-menu button {
   position: fixed;
   top: 3%;
-  left: 78%;
-  width: 20%;
+  left: 80%;
+  width: 15%;
   height: 10%;
 }
 
 .help-menu p {
-  font-size: xx-large;
+  font-size: 0.85rem;
 }
 
 .help-menu li {
-  font-size: x-large;
+  font-size: 0.9rem;
+}
+
+.reward-menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reward-menu .trophy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.reward-menu img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
 }
 
 

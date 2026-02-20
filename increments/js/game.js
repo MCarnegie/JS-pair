@@ -1,5 +1,5 @@
 const player = {
-    numClicks: 500000000,
+    numClicks: 0,
     numAutoClickSpeed: 0,
     numUpgradeClick: 0,
 }
@@ -67,13 +67,11 @@ function Select(img) {
     }, 50)
 }
 
-function unHideMenu() {
-    let e = document.getElementById("helpMenu")
+function unHideMenu(e) {
     e.classList.remove("hidden")
 }
 
-function hideMenu() {
-    let e = document.getElementById("helpMenu")
+function hideMenu(e) {
     e.classList.add("hidden")
 }
 
