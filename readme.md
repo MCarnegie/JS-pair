@@ -1,12 +1,12 @@
-## Click Area - Marco
-## Upgrade area - Marco
+## Click Area - Marco (DONE)
+## Upgrade area - Marco (DONE)
   - Must have 2 upgrades:
     1. Upgrade the value of each click (at least 3 upgrades)
     2. Start and upgrade an autoclicker timer so clicks happen automatically
        - 1 upgrade starts the autoclicker
        - 2 upgrades increase the autoclick speed
 
-## Scoreboard - Hanzhi
+## Scoreboard - Hanzhi (DONE)
 - Shows:
   - Total points collected
   - Current click value
