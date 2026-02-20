@@ -1,5 +1,5 @@
 const player = {
-    numClicks: 0,
+    numClicks: 5000000000,
     numAutoClickSpeed: 0,
     numUpgradeClick: 0,
 }
@@ -16,7 +16,7 @@ document.getElementById("cow").addEventListener("click", () => {
 })
 
 document.getElementById("autoClickSpeed").addEventListener("click", () => {
-    if (player.numClicks >= autoClickSpeedPrice) {
+    if (player.numClicks >= autoClickSpeedPrice && (player.numAutoClickSpeed * 100)<1000) {
         player.numClicks -= autoClickSpeedPrice
         document.getElementById("pointsFill").innerHTML = player.numClicks
         player.numAutoClickSpeed++;
@@ -30,6 +30,11 @@ document.getElementById("autoClickSpeed").addEventListener("click", () => {
             player.numClicks++
             document.getElementById("pointsFill").innerHTML = player.numClicks
         }, 1000 - (player.numAutoClickSpeed * 100))
+    }else{
+         document.getElementById("5000Upgrade").classList.add("hidden")
+         document.getElementById("autoPrice").classList.add("hidden")
+         document.getElementById("price").classList.add("hidden")
+         document.getElementById("max").classList.remove("hidden")
     }
 
     if(player.numAutoClickSpeed==1){
@@ -50,10 +55,6 @@ document.getElementById("upgradeClick").addEventListener("click", () => {
         document.getElementById("clickPrice").innerHTML = upgradeClickPrice
 
     }
-
-
-
-
     renderScoreboard();
     Select(document.getElementById("upgradeClick"))
 })
