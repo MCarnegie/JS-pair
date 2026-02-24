@@ -41,6 +41,9 @@ main {
   letter-spacing: 0.5px;
 }
 
+.score-area button{
+  margin-top: 10px;
+}
 
 .meter {
   height: 18px;
@@ -234,6 +237,20 @@ img .click-area {
   width: 100%;
   height: 150px;
   object-fit: contain;
+}
+
+.trophy-pop{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 50%;
+  opacity: 1;
+}
+.trophy-pop p{
+  font-size: x-large;
+  
 }
 
 
