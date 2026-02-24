@@ -1,8 +1,16 @@
+/*
+Marco Carnegie
+Hanzhi
 
-html, body {
- height: 100%;
- margin: 0;
- padding: 0;
+January 24th 2026
+Main Styling Sheet
+*/
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -13,7 +21,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
-  
+
 }
 
 main {
@@ -41,7 +49,7 @@ main {
   letter-spacing: 0.5px;
 }
 
-.score-area button{
+.score-area button {
   margin-top: 10px;
 }
 
@@ -74,8 +82,9 @@ main {
   grid-template-columns: 1fr 1fr 1fr;
   place-content: center;
   align-items: center;
-  height: 100vh; /* fill exactly the viewport */
-  
+  height: 100vh;
+  /* fill exactly the viewport */
+
 }
 
 
@@ -131,21 +140,21 @@ main {
   grid-template-rows: 1fr 1fr;
   place-items: center;
   height: 120%;
-  
+
 }
 
 .upgrade-area .tile {
   width: 70%;
   height: 90%;
-  margin:0;
-  
+  margin: 0;
+
 }
 
 
 .upgrade-area img {
   width: 60%;
   height: auto;
-  max-height:100px ;
+  max-height: 100px;
   display: block;
 
 }
@@ -219,7 +228,7 @@ img .click-area {
   font-size: 0.9rem;
 }
 
-.reward-menu{
+.reward-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -239,7 +248,7 @@ img .click-area {
   object-fit: contain;
 }
 
-.trophy-pop{
+.trophy-pop {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -248,9 +257,10 @@ img .click-area {
   width: 50%;
   opacity: 1;
 }
-.trophy-pop p{
+
+.trophy-pop p {
   font-size: x-large;
-  
+
 }
 
 

@@ -1,3 +1,11 @@
+/*
+Marco Carnegie
+Hanzhi
+
+January 24th 2026
+Main JS file
+*/
+
 const player = {
     numClicks: 0,
     numAutoClickSpeed: 0,
